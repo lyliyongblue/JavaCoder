@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="02965b8f-2ce8-4049-86d1-eac6c2fa2ab7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/data/softwares/develop-tools/go" />
+  <component name="ProjectId" id="1ej7j2I0plCAYeXOKpxMFOn5yDl" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/p1001/channel/doneWaitGroup" />
+      <recent name="$PROJECT_DIR$/p1001/channel/doneStruct" />
+      <recent name="$PROJECT_DIR$/p1001/channel/done" />
+      <recent name="$PROJECT_DIR$/p0502/queue/impl" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/p1001/channel" />
+      <recent name="$PROJECT_DIR$/p0601/functional/adder" />
+      <recent name="$PROJECT_DIR$/p0505/io" />
+      <recent name="$PROJECT_DIR$/p0505/io/entry" />
+      <recent name="$PROJECT_DIR$/p0502/retriever/mock" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build yong.com/hello/p1201/maze">
+    <configuration name="go build yong.com/hello/p1001/channel/select" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/p1001/channel/select/select.go" />
+      <package value="yong.com/hello/p1001/channel/select" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build yong.com/hello/p1005/atomic" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/p1005/atomic/main.go" />
+      <package value="yong.com/hello/p1005/atomic" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build yong.com/hello/p1101/http" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/p1101/http/http.go" />
+      <package value="yong.com/hello/p1101/http" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build yong.com/hello/p1101/http2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/p1101/http2/http.go" />
+      <package value="yong.com/hello/p1101/http2" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build yong.com/hello/p1201/maze" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="hello" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/p1201/maze/maze.go" />
+      <package value="yong.com/hello/p1201/maze" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build yong.com/hello/p1201/maze" />
+        <item itemvalue="Go Build.go build yong.com/hello/p1101/http2" />
+        <item itemvalue="Go Build.go build yong.com/hello/p1101/http" />
+        <item itemvalue="Go Build.go build yong.com/hello/p1005/atomic" />
+        <item itemvalue="Go Build.go build yong.com/hello/p1001/channel/select" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="720" y="436" width="479" height="144" key="#GOROOT" timestamp="1595340767372">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="720" y="436" width="479" height="144" key="#GOROOT/0.0.1920.1016@0.0.1920.1016" timestamp="1595340767372" />
+    <state x="1188" y="254" key="#Inspections" timestamp="1595248784467">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="1188" y="254" key="#Inspections/0.0.1920.1016@0.0.1920.1016" timestamp="1595248784467" />
+    <state x="424" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595031893031">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="424" y="161" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1016@0.0.1920.1016" timestamp="1595031893031" />
+    <state x="1062" y="308" width="720" height="409" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595508844810">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="1062" y="308" width="720" height="409" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1016@0.0.1920.1016" timestamp="1595508844810" />
+    <state x="1446" y="315" key="#com.intellij.ide.util.MemberChooser" timestamp="1594909206814">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="1446" y="315" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1016@0.0.1920.1016" timestamp="1594909206814" />
+    <state width="1312" height="250" key="GridCell.Tab.0.bottom" timestamp="1595517339982">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1312" height="250" key="GridCell.Tab.0.bottom/0.0.1920.1016@0.0.1920.1016" timestamp="1595517339982" />
+    <state width="1312" height="250" key="GridCell.Tab.0.center" timestamp="1595517339982">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1312" height="250" key="GridCell.Tab.0.center/0.0.1920.1016@0.0.1920.1016" timestamp="1595517339982" />
+    <state width="1312" height="250" key="GridCell.Tab.0.left" timestamp="1595517339982">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1312" height="250" key="GridCell.Tab.0.left/0.0.1920.1016@0.0.1920.1016" timestamp="1595517339982" />
+    <state width="1312" height="250" key="GridCell.Tab.0.right" timestamp="1595517339982">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1312" height="250" key="GridCell.Tab.0.right/0.0.1920.1016@0.0.1920.1016" timestamp="1595517339982" />
+    <state width="1234" height="225" key="GridCell.Tab.1.bottom" timestamp="1595335121515">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1234" height="225" key="GridCell.Tab.1.bottom/0.0.1920.1016@0.0.1920.1016" timestamp="1595335121515" />
+    <state width="1234" height="225" key="GridCell.Tab.1.center" timestamp="1595335121515">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1234" height="225" key="GridCell.Tab.1.center/0.0.1920.1016@0.0.1920.1016" timestamp="1595335121515" />
+    <state width="1234" height="225" key="GridCell.Tab.1.left" timestamp="1595335121514">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1234" height="225" key="GridCell.Tab.1.left/0.0.1920.1016@0.0.1920.1016" timestamp="1595335121514" />
+    <state width="1234" height="225" key="GridCell.Tab.1.right" timestamp="1595335121515">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state width="1234" height="225" key="GridCell.Tab.1.right/0.0.1920.1016@0.0.1920.1016" timestamp="1595335121515" />
+    <state x="812" y="172" width="947" height="740" key="SettingsEditor" timestamp="1594905083342">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="812" y="172" width="947" height="740" key="SettingsEditor/0.0.1920.1016@0.0.1920.1016" timestamp="1594905083342" />
+    <state x="715" y="308" key="com.goide.refactor.move.GoMoveDeclarationDialog" timestamp="1595330107803">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="715" y="308" key="com.goide.refactor.move.GoMoveDeclarationDialog/0.0.1920.1016@0.0.1920.1016" timestamp="1595330107803" />
+    <state x="637" y="62" width="646" height="891" key="find.popup" timestamp="1594911304417">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="637" y="62" width="646" height="891" key="find.popup/0.0.1920.1016@0.0.1920.1016" timestamp="1594911304417" />
+    <state x="1384" y="233" width="672" height="678" key="search.everywhere.popup" timestamp="1595513366559">
+      <screen x="0" y="0" width="1920" height="1016" />
+    </state>
+    <state x="1384" y="233" width="672" height="678" key="search.everywhere.popup/0.0.1920.1016@0.0.1920.1016" timestamp="1595513366559" />
+  </component>
+</project>
