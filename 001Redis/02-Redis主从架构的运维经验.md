@@ -3,10 +3,9 @@
 ```shell
 # 记录慢查询的总条数
 config get slowlog-max-len = 128
-# 超过多长时间被记录为慢查询，单位微秒
+# 超过多长时间被记录为慢查询，单位(微秒)  = 0 记录所有； < 0 
 config get slowlog-log-slower-than = 10000
-```
-
+`
 慢查询相关的命令
 ```shell
 # 获取慢查询队列
