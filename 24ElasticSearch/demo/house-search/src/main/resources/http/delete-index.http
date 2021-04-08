@@ -1,0 +1,3 @@
+DELETE {{host}}/house-search
+Content-Type: application/json
+Accept: application/json
