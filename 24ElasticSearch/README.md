@@ -423,3 +423,291 @@ QueryContext
 常用查询：
 - `全文本查询` 针对文本类型数据
 - `字段级别的查询` 针对结构化数据，如数字、日期等
+### 6.1.1 match模糊匹配查询
+
+```json
+{
+  "query": {
+    "match": {
+      "author": "贾平凹"
+    }
+  }
+}
+```
+
+### 6.1.2 match_phrase精确查询
+
+```json
+{
+  "query": {
+    "match_phrase": {
+      "title": "你若不勇敢，谁替你坚强"
+    }
+  }
+}
+```
+
+### 6.1.3 multi_match多个字段模糊匹配
+
+```json
+{
+  "query": {
+    "multi_match": {
+      "query": "贾平凹",
+      "fields": ["author", "title"]
+    }
+  }
+}
+```
+> 使用`fields`指定多个字段进行匹配查询
+
+### 6.1.4 query_string语法查询 `AND` `OR`
+
+```json
+{
+  "query": {
+    "query_string": {
+      "query": "(关键字1 AND 关键字2) OR 关键字3"
+    }
+  }
+}
+```
+
+```json
+{
+  "query": {
+    "query_string": {
+      "query": "关键字1 OR 关键字2",
+      "fields": ["title", "author"]
+    }
+  }
+}
+```
+### 6.1.5 `term`指定字段进行查询
+> 具体性查询： `term`
+```json
+{
+  "query": {
+    "term": {
+      "word_count": 1000
+    }
+  }
+}
+```
+范围查询：
+
+```json
+{
+  "query": {
+    "range": {
+      "word_count": {
+        "gte": 1000,
+        "lte": 3000
+      }
+    }
+  }
+}
+```
+> `range` 针对数值范围进行查询，也可以针对日期进行范围查询
+
+```json
+{
+  "query": {
+    "range": {
+      "publish_date": {
+        "gt": "2021-08-27",
+        "lte": "now"
+      }
+    }
+  }
+}
+```
+> 日期值表示上，可以使用关键字表示日期，比如： `now`
+
+## 6.2 子条件查询，Filter Context
+在查询过程中，只判断该文档是否**满足**条件，只有Yes/No的概念
+
+```json
+{
+  "query": {
+    "bool": {
+      "filter": {
+        "term": {
+          "word_count": 1000
+        }
+      }
+    }
+  }
+}
+```
+> `filter`关键字必须与`bool`一起使用
+# 7 符合条件查询
+常用查询
+- 固定分数查询
+- bool查询
+- ...more
+
+```json
+{
+  "query": {
+    "match": {
+      "title": "关键字"
+    }
+  }
+}
+```
+## 7.1 固定分数查询
+```json
+{
+  "query": {
+    "constant_score": {
+      "filter": {
+        "match": {
+          "title": "关键字"
+        }
+      }
+    }
+  }
+}
+```
+固定分支查询，查询的分数都是1
+## 7.2 固定分值查询，并指定分数
+
+```json
+{
+  "query": {
+    "constant_score": {
+      "filter": {
+        "match": {
+          "title": "关键字"
+        }
+      },
+      "boost": 2
+    }
+  }
+}
+```
+- 固定分值查询时，还可以通过关键字`boost`指定分数
+- 固定分值查询时，不支持`match`查询，只支持`filter`查询
+## 7.3 `should`查询，或的关系查询
+```json
+{
+  "query": {
+    "bool": {
+      "should": [
+        {
+          "match": {
+            "author": "关键字1"
+          }
+        },
+        {
+          "match": {
+            "title": "关键字2"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+## 7.4 `must`且的关系
+
+```json
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "author": "关键字1"
+          }
+        },
+        {
+          "match": {
+            "title": "关键字2"
+          }
+        }
+      ]
+    }
+  }
+}
+```
+## 7.5 `filter`与`must`结合使用
+
+```json
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "author": "关键字1"
+          }
+        },
+        {
+          "match": {
+            "title": "关键字2"
+          }
+        }
+      ],
+      "filter": [
+        {
+          "term": {
+            "word_count": 1000
+          }
+        }
+      ]
+    }
+  }
+}
+```
+## 7.6 `must_not`非
+
+```json
+{
+  "query": {
+    "bool": {
+      "must_not": {
+        "term": {
+          "author": "关键字"
+        }
+      }
+    }
+  }
+}
+```
+# 8 Java客户端说明
+## 8.1 ESJavaClient的历史
+### 8.1.1 JavaAPI Client
+- 优势：基于transport进行数据访问，能够使用ES集群内部的性能特性，性能相对好
+- 劣势：client版本需要和es集群版本一致，数据序列化通过java实现，es集群或jdk升级，客户端需要伴随升级。
+
+ES官网最早提供的Client，spring-data-elasticsearch也基于该client开发，
+使用transport接口进行通信，其工作方式是将webserver当做集群中的节点，
+获取集群数据节点(DataNode)并将请求路由到Node获取数据将，
+返回结果在webserver内部进行结果汇总。 
+client需要与es集群保持相对一致性，否则会出现各种『奇怪』的异常。
+由于ES集群升级很快，集群升级时客户端伴随升级的成本高。
+
+官网已声明es7.0将不在支持transport client(API Client),8.0正时移除
+
+### 8.1.2 REST Client
+- 优势：REST风格交互，符合ES设计初衷；兼容性强；
+- 劣势：性能相对API较低
+
+ESREST基于http协议，客户端发送请求到es的任何节点，节点会通过transport接口将请求路由到其他节点，完成数据处理后汇总并返回客户端，客户端负载低。
+
+RestFul是ES特性之一，但是直到5.0才有了自己的客户端，6.0才有的相对好用的客户端。在此之前JestClient作为第三方客户端，使用非常广泛。
+
+## 8.2 客户端的分类
+- Transport
+- Java Rest Client
+- Java High Level Client
+- Jest
+- Java Lower Level Client
+
+## 8.3 参考文档：
+[Elasticsearch Java Rest Client简述](https://www.cnblogs.com/549294286/p/10284343.html)
+[官方Rest客户端文档](https://www.elastic.co/guide/en/elasticsearch/client/java-rest/6.8/index.html)
+
+
