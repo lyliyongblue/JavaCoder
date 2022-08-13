@@ -60,9 +60,10 @@
 
     <modules>
         <module>service-commons-core</module>
-        <module>message-service-provider</module>
+        <module>message-service-api</module>
         <module>message-service</module>
-        <module>user-service-provider</module>
+        <module>user-service-api</module>
         <module>user-service</module>
+        <module>user-service-facade</module>
     </modules>
 </project>
